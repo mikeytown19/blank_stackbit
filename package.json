@@ -27,10 +27,15 @@
     "@chakra-ui/react": "^1.6.3",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
+    "@stackbit/gatsby-plugin-menus": "^0.0.4",
     "framer-motion": "^4",
     "gatsby": "^3.6.2",
+    "gatsby-plugin-react-helmet": "^4.6.0",
+    "gatsby-source-filesystem": "^2.1.43",
+    "gatsby-transformer-remark": "^4.3.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0"
   },
   "devDependencies": {
     "eslint": "^7.27.0",

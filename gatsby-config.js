@@ -1,5 +1,26 @@
-// gatsby-config.js
+const siteMetadata = require('./site-metadata.json');
 
 module.exports = {
-  plugins: ['@chakra-ui/gatsby-plugin'],
+  pathPrefix: '/',
+  siteMetadata,
+  plugins: [
+    '@chakra-ui/gatsby-plugin',
+    'gatsby-plugin-react-helmet',
+
+    'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'pages',
+        path: `${__dirname}/src/pages`,
+      },
+    },
+    {
+      resolve: '@stackbit/gatsby-plugin-menus',
+      options: {
+        sourceUrlPath: 'fields.url',
+        pageContextProperty: 'menus',
+      },
+    },
+  ],
 };
