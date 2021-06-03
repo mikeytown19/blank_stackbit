@@ -6,6 +6,8 @@ buildCommand: yarn build
 # the folder where static site generator puts the generated site
 publishDir: public
 # the assets object defining how to handle project assets
+nodeVersion: 12.13.0
+# the version so it can build with gatsby v3
 assets:
   referenceType: static
   # the folder with static asset files
