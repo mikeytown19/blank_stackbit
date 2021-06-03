@@ -1,0 +1,154 @@
+stackbitVersion: ~0.3.0
+# the name of the static site generator
+ssgName: gatsby
+# the build command that builds the static site
+buildCommand: yarn build
+# the folder where static site generator puts the generated site
+publishDir: public
+# the assets object defining how to handle project assets
+assets:
+  referenceType: static
+  # the folder with static asset files
+  staticDir: static
+  # the folder within the staticDir where the uploaded files will be stored
+  uploadDir: images
+  # the URL path from which the static assets will be server
+  publicPath: /
+# the folder containing project's data files (yaml, json, toml)
+dataDir: data
+# the folder containing project's markdown page files (.md, .mdx, .markdown)
+pagesDir: content
+# list of globs matching the files that should be excluded from the pagesDir
+excludePages:
+  - README.md
+
+models:
+  hero_section:
+    type: object
+    label: CTA section
+    labelField: title
+    fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the section
+      - type: markdown
+        name: content
+        label: Content
+        description: The text content of the section
+      - type: list
+        name: actions
+        label: Action buttons
+        items:
+          type: model
+          models:
+            - action
+      - type: enum
+        name: actions_position
+        label: Action buttons position
+        options:
+          - top
+          - bottom
+          - left
+          - right
+        default: bottom
+        description: The position of action buttons relative to the text content
+      - type: enum
+        name: actions_width
+        label: Action buttons width
+        options:
+          - fourty
+          - fifty
+          - sixty
+        default: fourty
+        description: >-
+          The action buttons container width as a percentage of the section
+          width. Used only when the action buttons position is set to "left" or
+          "right"
+      - type: enum
+        name: align
+        label: Section alignment
+        options:
+          - left
+          - right
+          - center
+        default: left
+        description: The horizontal alignment of the section content
+      - type: enum
+        name: padding_top
+        label: Section top padding
+        options:
+          - none
+          - small
+          - medium
+          - large
+        default: medium
+        description: The padding area (space) on the top of the section
+      - type: enum
+        name: padding_bottom
+        label: Section bottom padding
+        options:
+          - none
+          - small
+          - medium
+          - large
+        default: medium
+        description: The padding area (space) on the bottom of the section
+      - type: boolean
+        name: has_border
+        label: Section border
+        default: false
+        description: Add section bottom border
+      - type: enum
+        name: background_color
+        label: Background color
+        options:
+          - none
+          - primary
+          - secondary
+        default: none
+        description: The background color of the section
+      - type: image
+        name: background_image
+        label: Background image
+        description: The image displayed in the background of the section
+      - type: number
+        name: background_image_opacity
+        label: Background image opacity
+        description: >-
+          An integer between 0 and 100. A lower value makes the image more
+          transparent
+      - type: enum
+        name: background_image_size
+        label: Background image size
+        options:
+          - auto
+          - contain
+          - cover
+        default: cover
+        description: The size of the background image
+      - type: enum
+        name: background_image_position
+        label: Background image position
+        options:
+          - left top
+          - left center
+          - left bottom
+          - center top
+          - center center
+          - center bottom
+          - right top
+          - right center
+          - right bottom
+        default: center center
+        description: >-
+          The starting position of a background image. The first value is the
+          horizontal position, and the second value is the vertical
+      - type: enum
+        name: background_image_repeat
+        label: Background image repeat
+        options:
+          - repeat
+          - no-repeat
+        default: no-repeat
+        description: Repeat the image to cover the whole area

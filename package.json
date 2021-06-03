@@ -1,0 +1,39 @@
+{
+  "name": "blank_starter",
+  "version": "1.0.0",
+  "description": "Stackbit starter demo ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gatsby develop",
+    "build": "gatsby build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mikeytown19/blank_stackbit.git"
+  },
+  "keywords": [
+    "stackbit",
+    "gatsby"
+  ],
+  "author": "Michael Harvey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikeytown19/blank_stackbit/issues"
+  },
+  "homepage": "https://github.com/mikeytown19/blank_stackbit#readme",
+  "dependencies": {
+    "@chakra-ui/gatsby-plugin": "^2.0.1",
+    "@chakra-ui/react": "^1.6.3",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "framer-motion": "^4",
+    "gatsby": "^3.6.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.27.0",
+    "eslint-config-airbnb": "^18.2.1"
+  }
+}
