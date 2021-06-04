@@ -1,5 +1,11 @@
 const path = require('path');
 
+exports.onCreateNode = ({ node }) => {
+  if (node.internal.type === 'MarkdownRemark') {
+    console.log(node.internal.type);
+  }
+};
+
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
   const blogPostTemplate = path.resolve('./src/templates/default.jsx');

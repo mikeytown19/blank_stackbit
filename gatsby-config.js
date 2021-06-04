@@ -6,6 +6,12 @@ module.exports = {
   plugins: [
     '@chakra-ui/gatsby-plugin',
     'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-page-creator',
+      options: {
+        path: `${__dirname}/src/pages`,
+      },
+    },
 
     'gatsby-transformer-remark',
     {

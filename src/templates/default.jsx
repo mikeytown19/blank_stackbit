@@ -14,11 +14,11 @@ export const query = graphql`
   }
 `;
 const Default = ({ data, children }) => {
-  data = data.markdownRemark.frontmatter;
+  const dada = data.markdownRemark.frontmatter;
 
   return (
     <div>
-      <h1>{data.title}</h1>
+      <h1>{dada.title}</h1>
       {children}
     </div>
   );
